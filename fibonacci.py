@@ -9,8 +9,8 @@
 def user_input(): 
     while True:
         try:
-            user_value = input("Enter the number of terms: ") # get the user input
-            terms = int(user_value) #covert the user input to an integer so it can be vaidated
+            user = input("Enter the number of terms: ") # get the user input
+            terms = int(user) #covert the user input to an integer so it can be vaidated
             if terms > 0: # check if the user input is positve and valid
                 return terms # returns the value back to the function
             print("Please enter a positive integer.")
@@ -18,7 +18,7 @@ def user_input():
             print("Error! Invalid input, please enter a valid number.")
 
 # Function for generating the fibonacci sequence
-def generate_fibonacci(terms):
+def fibonacci(terms):
     a, b = 0, 1 # the starting two values of the fibonacci sequence (initialize the values)
     for i in range(terms): # repeats for the number of terms the user inputed
         print(a, end=' ') #prints the terms 
@@ -27,4 +27,4 @@ def generate_fibonacci(terms):
 
 terms = user_input() # gets the input and validates the user input
 print("User Input:", terms) 
-generate_fibonacci(terms) #prints the terms of the fibonacci sequence
+fibonacci(terms) #prints the terms of the fibonacci sequence
