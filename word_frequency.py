@@ -57,7 +57,7 @@ def print_frequencies(words, frequency):
     for i in range(len(words)):
         print(f"{words[i]}: {frequency[i]}")
 
-
+#call the functions 
 sentence = get_sentence() # gets the sentence from the user input
 words, frequency = calculate_frequencies(sentence)
 print_frequencies(words, frequency) # prints the word and the frequency
