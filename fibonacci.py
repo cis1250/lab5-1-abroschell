@@ -5,7 +5,7 @@
 
 #Lab 5 Part 1: Fibonacci Sequence
 
-# Function for validating and returning the user input
+# Fvalidating and returning the user input
 def user_input(): 
     while True:
         try:
@@ -17,7 +17,7 @@ def user_input():
         except ValueError:
             print("Error! Invalid input, please enter a valid number.")
 
-# Function for generating the fibonacci sequence
+# generating the fibonacci sequence
 def fibonacci(terms):
     a, b = 0, 1 # the starting two values of the fibonacci sequence (initialize the values)
     for i in range(terms): # repeats for the number of terms the user inputed
