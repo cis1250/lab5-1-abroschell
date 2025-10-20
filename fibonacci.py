@@ -27,4 +27,7 @@ def fibonacci(terms):
 
 terms = user_input() # gets the input and validates the user input
 print("User Input:", terms) 
+print("Fibonacci Sequence: ", end='')
 fibonacci(terms) #prints the terms of the fibonacci sequence
+print("") # adds a new line after the sequence prints
+
