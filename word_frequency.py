@@ -24,3 +24,41 @@ def is_sentence(text):
         return False
 
     return True
+
+# new added code with functions
+
+# to get and validate the user input
+def get_sentence():
+    while True:
+        sentence = input("Enter a sentence: ")
+        if is_sentence(sentence):
+            return sentence
+        print("This does not meet the criteria for a sentence.")
+
+# to calculate  the word frequencies
+def calculate_frequencies(sentence):
+    split_sentence = sentence.split()
+    words = []
+    frequency = []
+
+    for word in split_sentence:
+        word = word.strip(".,!?").lower()
+        if word in words:
+            index = words.index(word)
+            frequency[index] += 1
+        else:
+            words.append(word)
+            frequency.append(1)
+    
+    return words, frequency
+
+# to print the word frequencies
+def print_frequencies(words, frequency):
+    for i in range(len(words)):
+        print(f"{words[i]}: {frequency[i]}")
+
+
+sentence = get_sentence() # gets the sentence from the user input
+words, frequency = calculate_frequencies(sentence)
+print_frequencies(words, frequency) # prints the word and the frequency
+
